@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:powers/powers.dart';
 
 void main() {
@@ -78,6 +79,9 @@ class _ContentState extends State<Content> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: TextField(
+              inputFormatters: <TextInputFormatter>[
+                FilteringTextInputFormatter.digitsOnly,
+              ],
               keyboardType: TextInputType.number,
               controller: txtController,
             ),
