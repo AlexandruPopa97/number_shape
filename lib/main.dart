@@ -52,7 +52,7 @@ class _ContentState extends State<Content> {
           } else {
             displayedText = 'Number $num is neither SQUARE or TRIANGULAR.';
           }
-          //txtController.clear(); showDialog<String>
+          txtController.clear();
           return showDialog<String>(
               context: context,
               builder: (BuildContext context) {
